@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>在浏览器中使用art-template</title>
+  </head>
+  <body>
+    {{ if(user) }}
+    <ul>
+      <li>姓名: {{ user.name }}</li>
+      <li>年龄: {{ user.age }}</li>
+      <li>性别: {{ user.sex }}</li>
+      <li>爱好: {{ each user.hobbies }} {{ $value }} {{ /each }}</li>
+    </ul>
+    {{ /if }}
+  </body>
+</html>

@@ -3,18 +3,10 @@ var server = http.createServer()
 
 server.on('request', function(request, response) {
   console.log(`收到客户端请求，请求路径是：${request.url}`)
-  switch (request.url) {
-    case '/login':
-      response.write('login')
-      break
-    case '/test':
-      response.write('test')
-      break
-    default:
-      response.write('error')
-  }
+  response.write('hello ')
+  response.write('world ')
   //   告诉客户端，处理完成
-  response.end()
+  response.end('end')
 })
 
 // 绑定端口号，启动服务器
