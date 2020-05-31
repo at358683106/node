@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>留言板</title>
+
+    <!-- Bootstrap -->
+    <link href="/public/lib/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body style="padding: 30px 60px;">
+    <div class="page-header">
+      <h1><a href="/">首页</a> <small>发表评论</small></h1>
+    </div>
+
+    <form action="/comment" method="POST">
+      <div class="form-group">
+        <label for="name">姓名1</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="请输入你的姓名"
+          id="name"
+          name="name"
+          required
+          minlength="2"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="msg" style="margin-top: 10px;">内容2</label>
+        <textarea
+          class="form-control"
+          rows="3"
+          required
+          minlength="5"
+          placeholder="请输入留言内容"
+          id="msg"
+          name="msg"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-success">
+        发布
+      </button>
+    </form>
+  </body>
+</html>
