@@ -1,0 +1,27 @@
+{
+  "fruits": ["apple", "orange", "tomato", "grape"],
+  "students": [
+    {
+      "id": 1,
+      "name": "张三",
+      "gender": 1,
+      "age": 16,
+      "hobbies": "看书，听音乐"
+    },
+    {
+      "id": 2,
+      "name": "李四",
+      "gender": 0,
+      "age": 18,
+      "hobbies": "看书，听音乐，撸猫"
+    },
+    {
+      "id": 3,
+      "name": "王二",
+      "gender": 0,
+      "age": 17,
+      "hobbies": "看书，听音乐，遛狗"
+    },
+    { "id": 4, "name": "麻子", "gender": 1, "age": 15, "hobbies": "吃饭，游戏" }
+  ]
+}
