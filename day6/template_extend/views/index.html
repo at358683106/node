@@ -1,0 +1,19 @@
+{{ extend './layout.html'}}
+
+{{ block 'header' }}
+<style>
+  body{
+    background: skyblue;
+  }
+</style>
+{{ /block }}
+
+{{ block 'content' }}
+<h2> 这是index 页填坑的内容</h2>
+{{ /block }}
+
+{{ block 'script' }}
+<script>
+  console.log('这是 首页的 js')
+</script>
+{{ /block }}
