@@ -1,0 +1,13 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "at358683106 <mxd_358683106@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "express": "^4.17.1",
+    "express-art-template": "^1.0.1",
+    "mongoose": "^5.10.7"
+  }
+}
