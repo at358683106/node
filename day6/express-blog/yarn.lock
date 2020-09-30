@@ -63,6 +63,11 @@ body-parser@1.19.0:
     raw-body "2.4.0"
     type-is "~1.6.17"
 
+bootstrap@3.3.7:
+  version "3.3.7"
+  resolved "https://registry.npm.taobao.org/bootstrap/download/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
+  integrity sha1-WjiTlFSfIzMIdaOxUGVldPip63E=
+
 bson@^1.1.4:
   version "1.1.5"
   resolved "https://registry.npm.taobao.org/bson/download/bson-1.1.5.tgz#2aaae98fcdf6750c0848b0cba1ddec3c73060a34"
@@ -346,6 +351,11 @@ isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/isarray/download/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   integrity sha1-u5NdSFgsuhaMBoNJV6VKPgcSTxE=
+
+jquery@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.npm.taobao.org/jquery/download/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
+  integrity sha1-17TQjhv9uGrS8aPQOeoXMEcXq7U=
 
 js-tokens@^3.0.1:
   version "3.0.2"
