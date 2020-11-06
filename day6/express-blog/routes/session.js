@@ -38,6 +38,7 @@ module.exports = function (router) {
 
           new User(body).save(function (error) {
             if (error) throw error;
+            req.session.user = body;
             return res.status(200).json({
               err_code: 0,
               message: "ok",
@@ -51,5 +52,35 @@ module.exports = function (router) {
           message: "Internal Error",
         })
       );
+  });
+
+  router.post("/login", function (req, res) {
+    User.findOne(
+      { ...req.body, password: md5(md5(req.body.password)) },
+      function (err, data) {
+        if (err) throw err;
+        if (data) {
+          req.session.user = data;
+          return res.status(200).json({
+            err_code: 0,
+            message: "ok",
+          });
+        }
+        return res.status(200).json({
+          err_code: 1,
+          message: "email or password wrong",
+        });
+      }
+    ).catch((err) =>
+      res.status(500).json({
+        err_code: 500,
+        message: "Internal Error",
+      })
+    );
+  });
+
+  router.get("/logout", function (req, res) {
+    req.session.user = null;
+    res.redirect("/login");
   });
 };
