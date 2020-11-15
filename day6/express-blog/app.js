@@ -29,4 +29,19 @@ app.use(
 
 app.use(router);
 
+/**
+ * 统一错误处理
+ * 当有中间件调用next时传递了参数时，会直接调用到这里，不会往下执行
+ */
+app.use(function (err, req, res, next) {
+  res.status(500).json({
+    err_code: 500,
+    message: err.message,
+  });
+});
+
+app.use(function (req, res, next) {
+  res.render("404.html");
+});
+
 app.listen(3000, () => console.log("running"));

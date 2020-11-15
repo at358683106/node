@@ -11,7 +11,7 @@ module.exports = function (router) {
     res.render("register.html");
   });
 
-  router.post("/register", function (req, res) {
+  router.post("/register", function (req, res, next) {
     var body = req.body;
     body.password = md5(md5(body.password));
     new Promise(function (resolve, reject) {
@@ -46,15 +46,10 @@ module.exports = function (router) {
           });
         });
       })
-      .catch((err) =>
-        res.status(500).json({
-          err_code: 500,
-          message: "Internal Error",
-        })
-      );
+      .catch((err) => next(err));
   });
 
-  router.post("/login", function (req, res) {
+  router.post("/login", function (req, res, next) {
     User.findOne(
       { ...req.body, password: md5(md5(req.body.password)) },
       function (err, data) {
@@ -71,12 +66,7 @@ module.exports = function (router) {
           message: "email or password wrong",
         });
       }
-    ).catch((err) =>
-      res.status(500).json({
-        err_code: 500,
-        message: "Internal Error",
-      })
-    );
+    ).catch((err) => next(err));
   });
 
   router.get("/logout", function (req, res) {
