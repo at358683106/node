@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+
 app.use(
   session({
     secret: "iTest",
@@ -28,6 +29,7 @@ app.use(
 );
 
 app.use(router);
+
 
 /**
  * 统一错误处理
