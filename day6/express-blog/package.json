@@ -9,7 +9,7 @@
     "blueimp-md5": "^2.18.0",
     "bootstrap": "3.3.7",
     "dayjs": "^1.9.7",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-art-template": "^1.0.1",
     "express-session": "^1.17.1",
     "jquery": "^3.5.1",
